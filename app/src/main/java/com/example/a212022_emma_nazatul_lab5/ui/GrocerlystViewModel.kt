@@ -75,7 +75,7 @@ class GrocerlystViewModel(application: Application) : AndroidViewModel(applicati
 
                 _uiState.update { currentState ->
                     currentState.copy(
-                        showToast = true, // <-- MAKE SURE THIS IS TRUE!
+                        showToast = true,
                         toastMessage = if (currentId == 0) "$nameInput added to list!" else "$nameInput details updated!"
                     )
                 }

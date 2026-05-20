@@ -30,7 +30,7 @@ fun SummaryScreen(
 ) {
     val liveTotalSpent = databaseItems.sumOf { it.price }
 
-    // DYNAMIC CHECK: If currentItemId is NOT 0, the user was EDITING an item!
+    //If currentItemId is NOT 0, the user was EDITING an item!
     val isEditing = uiState.currentItemId != 0
 
     if (uiState.showToast) {
