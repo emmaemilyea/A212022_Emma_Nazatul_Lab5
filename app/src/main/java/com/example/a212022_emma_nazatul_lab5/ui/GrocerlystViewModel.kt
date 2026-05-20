@@ -72,6 +72,13 @@ class GrocerlystViewModel(application: Application) : AndroidViewModel(applicati
                 } else {
                     repository.updateItem(entityItem) // Modifies the existing row if ID matches!
                 }
+
+                _uiState.update { currentState ->
+                    currentState.copy(
+                        showToast = true, // <-- MAKE SURE THIS IS TRUE!
+                        toastMessage = if (currentId == 0) "$nameInput added to list!" else "$nameInput details updated!"
+                    )
+                }
             }
         }
     }
